@@ -1,0 +1,17 @@
+#!/bin/bash
+
+SSID_NAME=$(iwgetid -r)
+
+URGENT_VALUE=""
+
+if [["${SSID_NAME} != ""]]; then
+  echo "${SSID_NAME}"
+  echo "${SSID_NAME}"
+  echo ""
+
+  if [[ "${URGENT_VALUE}" != "" ]] && [[ $(echo "${SSID_NAME}" | grep -we "${URGENT_VALUE}") != ""]]; then
+    exit 33
+  fi
+fi
+
+exit 0
