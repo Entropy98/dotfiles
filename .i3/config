@@ -113,6 +113,7 @@ bindsym Mod1+minus scratchpad show
 
 set $workspace2 "2:  Firefox"
 set $workspace10 "10:  Spotify"
+set $workspace9 "9:  Slack"
 
 # switch to workspace
 bindsym Mod1+1 workspace 1
@@ -123,7 +124,7 @@ bindsym Mod1+5 workspace 5
 bindsym Mod1+6 workspace 6
 bindsym Mod1+7 workspace 7
 bindsym Mod1+8 workspace 8
-bindsym Mod1+9 workspace 9
+bindsym Mod1+9 workspace $workspace9
 bindsym Mod1+0 workspace $workspace10
 
 # move focused container to workspace
@@ -141,6 +142,7 @@ bindsym Mod1+Shift+0 move container to workspace $workspace10
 #workspace assignments
 assign [class="Firefox"] $workspace2
 for_window [class="Spotify"] $workspace10
+assign [class="Slack"] $workspace9
 
 #Monitor layout
 exec xrandr --output HDMI-1 --auto --right-of eDP-1
@@ -200,9 +202,9 @@ colors{
 }
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ #increase sound volume
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- #decrease sound volume
+bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle #toggle mute
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
