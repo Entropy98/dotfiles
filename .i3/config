@@ -191,12 +191,12 @@ bar {
   font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
   font pango:Arimo 11
 colors{
-	background #272C2E
-	focused_workspace #313430 #2AA198 #e2cba6
-	statusline #e2cba6
-	separator #e2cba6
-	active_workspace #272C2E #272C2E #e2cba6
-	inactive_workspace #272C2E #272C2E #e2cba6
+	background #1D6898
+	focused_workspace #1D6898 #CA7574 #183d32
+	statusline #CA7574
+	separator #CA7574
+	active_workspace #1D6898 #1D6898 #CA7574
+	inactive_workspace #1D6898 #1D6898 #CA7574
 	urgent_workspace #47453b #47453b #b6b8b2
 }
 }
@@ -231,14 +231,14 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 #class		border bg text indicator
-  client.focused #9ab384 #313430 #e2cba6 #9ab384
-  client.focused_inactive #272C2E #272C2E #e2cba6 #9ab384
-  client.focused_background #272C2E #272C2E #e2cba6 #9ab384
-  client.unfocused #272C2E #272C2E #e2cba6 #9ab384
-  client.urgent #676960 #676960 #b6b8b2 #9ab384
-  client.placeholder #47453b #47453b #e2cba6 #9ab384
+  client.focused #CA7574 #1D6898 #CA7574 #CA7574
+  client.focused_inactive #1D6898 #1D6898 #CA7574 #CA7574
+  client.focused_background #1D6898 #1D6898 #CA7574 #CA7574
+  client.unfocused #1D6898 #1D6898 #CA7574 #CA7574
+  client.urgent #676960 #676960 #b6b8b2 #CA7574
+  client.placeholder #47453b #47453b #CA7574 #CA7574
 
 #lock
-bindsym Mod1+Shift+x exec "i3lock -t -i ~/Pictures/Wallpapers/transistor_town.png"
+bindsym Mod1+Shift+x exec "i3lock -t -i ~/Pictures/Wallpapers/nightwave.png"
 
 for_window [class="^.*"] border pixel 1
