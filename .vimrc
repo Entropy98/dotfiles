@@ -1,3 +1,6 @@
+"language specific
+au BufRead,BufNewFile *.S set filetype=asm
+
 set nocompatible  "Kill vi-compatibility
 set t_Co=256 "256 color
 set encoding=utf-8 "UTF-8 character encoding
@@ -43,3 +46,8 @@ filetype plugin indent on
 
 set number
 set relativenumber
+
+execute pathogen#infect()
+
+"Turn on coloring on startup
+"autocmd VimEnter * ColorToggle
