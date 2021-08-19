@@ -1,0 +1,1 @@
+Colorizer.vmb: call delete('/home/entropy/.vim/plugin/ColorizerPlugin.vim')|call delete('/home/entropy/.vim/doc/Colorizer.txt')|call delete('/home/entropy/.vim/autoload/Colorizer.vim')

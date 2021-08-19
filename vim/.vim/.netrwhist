@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/entropy/Projects/laurenweiglewebsite/lweigle/static/lweigle/css'
+let g:netrw_dirhist_8='/home/entropy/Projects/harperweiglewebsite/hweigle'
+let g:netrw_dirhist_7='/home/entropy/Projects/harperweiglewebsite'
+let g:netrw_dirhist_6='/home/entropy/Projects/harperweiglewebsite/hweigle/static/hweigle/css'
+let g:netrw_dirhist_5='/home/entropy/Projects/harperweiglewebsite/hweigle/static/hweigle'
+let g:netrw_dirhist_4='/home/entropy/.config/i3'
+let g:netrw_dirhist_3='/home/entropy/Projects/CMU/17437/hweigle/hw7/socialnetwork/templates/socialnetwork'
+let g:netrw_dirhist_2='/home/entropy/Projects/CMU/17437/hweigle/hw7/socialnetwork/templates'
+let g:netrw_dirhist_1='/home/entropy/Projects/CMU/17437/hweigle/hw7/socialnetwork'
+let g:netrw_dirhist_0='/home/entropy/Projects/CMU/17437/hweigle/hw7'

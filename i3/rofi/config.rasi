@@ -4,16 +4,16 @@ configuration {
 	display-window:  "Window";
 	show-icons:      true;
 	sidebar-mode:    true;
-  font:"Inconsolata for Powerline 12";
+  font:"VT323 16";
 }
 
 * {
-	background-color:            #113E59;
-	text-color:                  #CA7574;
-	selbg:                       #7CC0D0;
-	actbg:                       #7CC0D0;
-	urgbg:                       #e53935;
-	winbg:			     #CA7574;
+	background-color:            #5A2F3C;
+	text-color:                  #7CB6F1;
+	selbg:                       #E580A7;
+	actbg:                       #6D82A5;
+	urgbg:                       #FFFFFF;
+	winbg:			                 #FFFFFF;
 
 	selected-normal-foreground:  @winbg;
 	normal-foreground:           @text-color;

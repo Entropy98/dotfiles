@@ -1,0 +1,40 @@
+#!/bin/bash
+
+CURRENT=$(sp current)
+CURSECTION=""
+ALBUM=""
+ALBUMARTIST=""
+ARTIST=""
+TITLE=""
+for WORD in $CURRENT
+do
+	if [[ "${WORD}" == "Album" ]] ||
+		[[ "${WORD}" == "AlbumArtist" ]] ||
+		[[ "${WORD}" == "Artist" ]] ||
+		[[ "${WORD}" == "Title" ]]; then
+		CURSECTION="${WORD}"
+	elif [[ "${WORD}" == "Error:" ]]; then
+		echo "No Session"
+		exit 0
+	else
+		case $CURSECTION in
+			"Album")
+				ALBUM="${ALBUM} ${WORD}"
+				;;
+			"AlbumArtist")
+				ALBUMARTIST="${ALBUMARTIST} ${WORD}"
+				;;
+			"Artist")
+				ARTIST="${ARTIST} ${WORD}"
+				;;
+			"Title")
+				TITLE="${TITLE} ${WORD}"
+				;;
+			*)
+				;;
+		esac
+	fi
+done
+
+echo "${TITLE} by ${ARTIST}"
+exit 0
