@@ -1,0 +1,28 @@
+#!/bin/bash
+
+INFO=$(bluetoothctl info)
+DEVICE=""
+DEVICENAME="0"
+for WORD in $INFO
+do
+	case $WORD in
+		"Missing")
+			echo "No Device"
+			exit 0
+			;;
+		"Name:")
+			DEVICENAME="1"
+			;;
+		"Alias:")
+			DEVICENAME="0"
+			;;
+		*)
+			if [[ "${DEVICENAME}" == "1" ]]; then
+				DEVICE="${DEVICE} ${WORD}"
+			fi
+			;;
+	esac
+
+done
+echo "${DEVICE}"
+exit 0
