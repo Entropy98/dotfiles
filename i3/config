@@ -117,51 +117,43 @@ bindsym Mod1+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym Mod1+minus scratchpad show
 
-set $workspace2 "2: Firefox"
-set $workspace10 "10:  Spotify"
-set $workspace9 "9:  Slack"
-set $workspace8 "8: ☎  Zoom"
-set $workspace7 "7:  Discord"
+exec_always --no-startup-id exec i3-workspace-names-daemon
 
 # switch to workspace
-bindsym Mod1+1 workspace 1
-bindsym Mod1+2 workspace 2
-bindsym Mod4+2 workspace $workspace2
-bindsym Mod1+3 workspace 3
-bindsym Mod1+4 workspace 4
-bindsym Mod1+5 workspace 5
-bindsym Mod1+6 workspace 6
-bindsym Mod1+7 workspace 7
-bindsym Mod1+8 workspace 8
-bindsym Mod1+9 workspace 9
-bindsym Mod1+0 workspace 10
-bindsym Mod4+7 workspace $workspace7
-bindsym Mod4+8 workspace $workspace8
-bindsym Mod4+9 workspace $workspace9
-bindsym Mod4+0 workspace $workspace10
+bindsym Mod1+0 workspace number 0
+bindsym Mod1+1 workspace number 1
+bindsym Mod1+2 workspace number 2
+bindsym Mod1+3 workspace number 3
+bindsym Mod1+4 workspace number 4
+bindsym Mod1+5 workspace number 5
+bindsym Mod1+6 workspace number 6
+bindsym Mod1+7 workspace number 7
+bindsym Mod1+8 workspace number 8
+bindsym Mod1+9 workspace number 9
+bindsym Mod4+A workspace number 10
+bindsym Mod4+B workspace number 11
+bindsym Mod4+C workspace number 12
+bindsym Mod4+D workspace number 13
+bindsym Mod4+E workspace number 14
+bindsym Mod4+F workspace number 15
 
 # move focused container to workspace
-bindsym Mod1+Shift+1 move container to workspace 1
-bindsym Mod1+Shift+2 move container to workspace 2
-bindsym Mod4+Shift+2 move container to workspace $workspace2
-bindsym Mod1+Shift+3 move container to workspace 3
-bindsym Mod1+Shift+4 move container to workspace 4
-bindsym Mod1+Shift+5 move container to workspace 5
-bindsym Mod1+Shift+6 move container to workspace 6
-bindsym Mod1+Shift+7 move container to workspace 7
-bindsym Mod1+Shift+8 move container to workspace 8
-bindsym Mod1+Shift+9 move container to workspace 9
-bindsym Mod1+Shift+0 move container to workspace 10
-bindsym Mod4+Shift+8 move container to workspace $workspace8
-bindsym Mod4+Shift+9 move container to workspace $workspace9
-bindsym Mod4+Shift+0 move container to workspace $workspace10
-
-#workspace assignments
-assign [class="Firefox"] $workspace2
-for_window [class="Spotify"] $workspace10
-assign [class="Slack"] $workspace9
-assign [class="zoom"] $workspace8
-assign [class="discord"] $workspace7
+bindsym Mod1+Shift+0 move container to workspace number 0
+bindsym Mod1+Shift+1 move container to workspace number 1
+bindsym Mod1+Shift+2 move container to workspace number 2
+bindsym Mod1+Shift+3 move container to workspace number 3
+bindsym Mod1+Shift+4 move container to workspace number 4
+bindsym Mod1+Shift+5 move container to workspace number 5
+bindsym Mod1+Shift+6 move container to workspace number 6
+bindsym Mod1+Shift+7 move container to workspace number 7
+bindsym Mod1+Shift+8 move container to workspace number 8
+bindsym Mod1+Shift+9 move container to workspace number 9
+bindsym Mod4+Shift+A move container to workspace number 10
+bindsym Mod4+Shift+B move container to workspace number 11
+bindsym Mod4+Shift+C move container to workspace number 12
+bindsym Mod4+Shift+D move container to workspace number 13
+bindsym Mod4+Shift+E move container to workspace number 14
+bindsym Mod4+Shift+F move container to workspace number 15
 
 #Monitor layout
 exec xrandr --output HDMI-1 --auto --right-of eDP-1
@@ -257,7 +249,7 @@ bindsym XF86AudioPrev exec playerctl previous
   client.placeholder #5A2F3C #5A2F3C #AF5A71 #AF5A71
 
 #lock
-bindsym Mod1+Shift+x exec "i3lock -t -i ~/Pictures/Wallpapers/vaporsantamonicasunrisewavearizona.png"
+bindsym Mod4+l exec "i3lock -t -i ~/Pictures/Wallpapers/vaporsantamonicasunrisewavearizona.png"
 
 #background
 exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/vaporsantamonicabeachwavearizona.png"

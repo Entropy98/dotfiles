@@ -1,0 +1,17 @@
+{
+    "firefox": "firefox",
+    "Gnome-terminal": "terminal",
+    "Gnome-calculator": "calculator",
+    "Cinnamon-settings": "wrench",
+    "Slack": "slack",
+    "Spotify": "spotify",
+    "Nautilus": "folder",
+    "Xviewer": "image",
+    "Xreader": "file-pdf",
+    "Xed": "file",
+    "libreoffice-calc": "file-excel",
+    "libreoffice-impress": "file-powerpoint",
+    "libreoffice-writer": "file-word",
+    "discord": "discord",
+    "_no_match": ""
+}
