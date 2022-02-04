@@ -54,6 +54,6 @@ nnoremap <C-right> <C-W><C-L>
 nnoremap <C-left> <C-W><C-H>
 
 execute pathogen#infect()
-autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTree | wincmd p
 "Turn on coloring on startup
 "autocmd VimEnter * ColorToggle
