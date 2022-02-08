@@ -15,11 +15,9 @@
 #Harper Weigle i3 Config File
 #Last modified 2/22/2021
 
-font pango:VT323 13
-
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:Accanthis ADF std 15
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -156,8 +154,6 @@ bindsym Mod4+Shift+E move container to workspace number 14
 bindsym Mod4+Shift+F move container to workspace number 15
 
 #Monitor layout
-exec xrandr --output HDMI-1 --auto --right-of eDP-1
-exec xrandr --output DP-1 --auto --left-of eDP-1
 
 # reload the configuration file
 bindsym Mod1+Shift+c reload
@@ -195,19 +191,18 @@ bindsym Mod1+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  status_command i3blocks -c ~/.i3/i3blocks.conf
-  #i3bar_command ~/.i3/lemonbar/i3_lemonbar.sh
+  status_command i3blocks -c ~/Projects/dotfiles/i3/bar/i3blocks.conf
   workspace_buttons yes
   position bottom
-  font pango:VT323 18
+  font pango:Accanthis ADF Std 15, Font Awesome 6 Brands, Font Awesome, Font Awesome Free 18
 colors{
-	background #5A2F3C
-	focused_workspace #AF5A71 #AF5A71 #7CB6F1
-	statusline #7CB6F1
-	separator #5A2F3C
-	active_workspace #AF5A71 #5A2F3C #7CB6F1
-	inactive_workspace #AF5A71 #5A2F3C #7CB6F1
-	urgent_workspace #AF5A71 #5A2F3C #CA7575
+	background #3A523F
+	focused_workspace #83BE5D #83BE5D #5C82A9
+	statusline #D4D095
+	separator #3A523F
+	active_workspace #83BE5D #3A523F #5C82A9
+	inactive_workspace #83BE5D #3A523F #D4D095
+	urgent_workspace #83BE5D #3A523F #CA7575
 }
 }
 
@@ -241,19 +236,27 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 #class		border bg text indicator
-  client.focused #AF5A71 #7CB6F1 #AF5A71 #AF5A71
-  client.focused_inactive #7CB6F1 #AF5A71 #AF5A71 #AF5A71
-  client.focused_background #7CB6F1 #AF5A71 #7CB6F1 #7CB6F1
-  client.unfocused #7CB6F1 #AF5A71 #AF5A71 #AF5A71
-  client.urgent #AF5A71 #AF5A71 #5A2F3C #AF5A71
-  client.placeholder #5A2F3C #5A2F3C #AF5A71 #AF5A71
+  client.focused #83BE5D #5C82A9 #83BE5D #83BE5D
+  client.focused_inactive #5C82A9 #83BE5D #83BE5D #83BE5D
+  client.focused_background #5C82A9 #83BE5D #5C82A9 #5C82A9
+  client.unfocused #5C82A9 #83BE5D #83BE5D #83BE5D
+  client.urgent #83BE5D #83BE5D #3A523F #83BE5D
+  client.placeholder #3A523F #3A523F #83BE5D #83BE5D
 
 #lock
-bindsym Mod4+l exec "i3lock -t -i ~/Pictures/Wallpapers/vaporsantamonicasunrisewavearizona.png"
+bindsym Mod4+l exec "i3lock -t -i ~/Pictures/Wallpapers/Lost.png"
 
 #background
-exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/vaporsantamonicabeachwavearizona.png"
+exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/Lost.png"
 
-for_window [class="^.*"] border pixel 1
+#transparency
+exec --no-startup-id picom -CGb
+
+for_window [class="^.*"] border pixel 3
+
+#gaps
+
+gaps inner 10
+gaps outer 5
 
 #language

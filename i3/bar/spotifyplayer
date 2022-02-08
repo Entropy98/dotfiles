@@ -1,6 +1,7 @@
 #!/bin/bash
 
-CURRENT=$(sp current)
+SPDIR="/home/harper/Projects/dotfiles/i3/bar"
+CURRENT=$($SPDIR/sp current)
 CURSECTION=""
 ALBUM=""
 ALBUMARTIST=""

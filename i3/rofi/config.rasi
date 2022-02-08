@@ -8,10 +8,10 @@ configuration {
 }
 
 * {
-	background-color:            #5A2F3C;
-	text-color:                  #7CB6F1;
-	selbg:                       #E580A7;
-	actbg:                       #6D82A5;
+	background-color:            #3A523F;
+	text-color:                  #D4D095;
+	selbg:                       #5C82A9;
+	actbg:                       #5C82A9;
 	urgbg:                       #FFFFFF;
 	winbg:			                 #FFFFFF;
 
