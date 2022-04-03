@@ -53,6 +53,25 @@ bindsym Mod1+Shift+f exec firefox
 # kill focused window
 bindsym Mod1+Shift+q kill
 
+#colors
+set_from_resource $fg foreground
+set_from_resource $bg background
+set_from_resource $c1 color1
+set_from_resource $c2 color2
+set_from_resource $c3 color3
+set_from_resource $c4 color4
+set_from_resource $c5 color5
+set_from_resource $c6 color6
+set_from_resource $c7 color7
+set_from_resource $c8 color8
+set_from_resource $c9 color9
+set_from_resource $c10 color10
+set_from_resource $c11 color11
+set_from_resource $c12 color12
+set_from_resource $c13 color13
+set_from_resource $c14 color14
+set_from_resource $c15 color15
+
 # start rofi (a program launcher)
 bindsym Mod1+d exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -199,13 +218,13 @@ bar {
   position bottom
   font pango:VT323 18
 colors{
-	background #5A2F3C
-	focused_workspace #AF5A71 #AF5A71 #7CB6F1
-	statusline #7CB6F1
-	separator #5A2F3C
-	active_workspace #AF5A71 #5A2F3C #7CB6F1
-	inactive_workspace #AF5A71 #5A2F3C #7CB6F1
-	urgent_workspace #AF5A71 #5A2F3C #CA7575
+	background $bg
+	focused_workspace $bg $c6 $fg
+	statusline $fg
+	separator $fg
+	active_workspace $bg $c5 $fg
+	inactive_workspace $bg $bg $fg
+	urgent_workspace $bg $c5 $c2
 }
 }
 
@@ -239,18 +258,18 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 #class		border bg text indicator
-  client.focused #AF5A71 #7CB6F1 #AF5A71 #AF5A71
-  client.focused_inactive #7CB6F1 #AF5A71 #AF5A71 #AF5A71
-  client.focused_background #7CB6F1 #AF5A71 #7CB6F1 #7CB6F1
-  client.unfocused #7CB6F1 #AF5A71 #AF5A71 #AF5A71
-  client.urgent #AF5A71 #AF5A71 #5A2F3C #AF5A71
-  client.placeholder #5A2F3C #5A2F3C #AF5A71 #AF5A71
+  client.focused $bg $fg $bg $bg
+  client.focused_inactive $fg $bg $bg $bg
+  client.focused_background $fg $bg $fg $fg
+  client.unfocused $fg $bg $bg $bg
+  client.urgent $bg $bg $c5 $bg
+  client.placeholder $c5 $c5 $bg $bg
 
 #lock
-bindsym Mod4+l exec "i3lock -t -i ~/Pictures/Wallpapers/vaporsantamonicasunrisewavearizona.png"
+bindsym Mod4+l exec "i3lock -t -i ~/Pictures/Wallpapers/outrun.png"
 
 #background
-exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/vaporsantamonicabeachwavearizona.png"
+exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/outrun.png"
 
 gaps inner 10
 gaps outer 5

@@ -1,11 +1,13 @@
 {
-    "firefox": "firefox",
+    "firefox": "globe",
     "Gnome-terminal": "terminal",
     "Gnome-calculator": "calculator",
     "Cinnamon-settings": "wrench",
     "Slack": "slack",
     "Spotify": "spotify",
     "Nautilus": "folder",
+    "Nautilus": "folder",
+    "Org.gnome.Nautilus": "folder",
     "Xviewer": "image",
     "Xreader": "file-pdf",
     "Xed": "file",
@@ -13,5 +15,6 @@
     "libreoffice-impress": "file-powerpoint",
     "libreoffice-writer": "file-word",
     "discord": "discord",
+    "signal": "comment",
     "_no_match": ""
 }
