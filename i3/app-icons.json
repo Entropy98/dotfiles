@@ -9,6 +9,7 @@
     "Nautilus": "folder",
     "Org.gnome.Nautilus": "folder",
     "Xviewer": "image",
+    "Eog": "image",
     "Xreader": "file-pdf",
     "Xed": "file",
     "libreoffice-calc": "file-excel",
@@ -16,5 +17,6 @@
     "libreoffice-writer": "file-word",
     "discord": "discord",
     "signal": "comment",
+    "zoom": "video",
     "_no_match": ""
 }
