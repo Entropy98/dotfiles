@@ -17,7 +17,7 @@
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Z003 15
+font pango:BankGothic 15
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -194,7 +194,7 @@ bar {
   status_command i3blocks -c ~/Projects/dotfiles/i3/bar/i3blocks2.conf
   workspace_buttons no
   position bottom
-  font pango:Z003, Font Awesome 6 Brands, Font Awesome, Font Awesome Free 25
+  font pango:BankGothic, Font Awesome 6 Brands, Font Awesome, Font Awesome Free 25
 colors{
 	background #3A523F
 	focused_workspace #83BE5D #83BE5D #5C82A9
@@ -208,8 +208,8 @@ colors{
 bar {
   status_command i3blocks -c ~/Projects/dotfiles/i3/bar/i3blocks.conf
   workspace_buttons yes
-  position bottom
-  font pango:Z003, Font Awesome 6 Brands, Font Awesome, Font Awesome Free 25
+  position top
+  font pango:BankGothic, Font Awesome 6 Brands, Font Awesome, Font Awesome Free 25
 colors{
 	background #3A523F
 	focused_workspace #83BE5D #83BE5D #5C82A9

@@ -2,10 +2,12 @@
     "firefox": "firefox",
     "Gnome-terminal": "code",
     "Gnome-calculator": "calculator",
+    "speedcrunch": "calculator",
     "Cinnamon-settings": "wrench",
     "Slack": "slack",
     "Spotify": "spotify",
     "Nautilus": "folder",
+    "org.gnome.Nautilus": "folder",
     "Xviewer": "image",
     "Xreader": "file-pdf",
     "Xed": "file",
@@ -13,5 +15,8 @@
     "libreoffice-impress": "file-powerpoint",
     "libreoffice-writer": "file-word",
     "discord": "discord",
+    "Microsoft Teams": "microsoft",
+    "microsoft-edge": "edge",
+    "wine-glass": "Wine",
     "_no_match": ""
 }

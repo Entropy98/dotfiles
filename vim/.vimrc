@@ -53,6 +53,9 @@ nnoremap <C-up> <C-W><C-K>
 nnoremap <C-right> <C-W><C-L>
 nnoremap <C-left> <C-W><C-H>
 
+" Refresh CScope
+map <F5> :!cscope -Rb<CR>:cs reset<CR><CR>
+
 execute pathogen#infect()
 autocmd VimEnter * NERDTree | wincmd p
 "Turn on coloring on startup
