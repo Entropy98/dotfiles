@@ -60,3 +60,10 @@ execute pathogen#infect()
 autocmd VimEnter * NERDTree | wincmd p
 "Turn on coloring on startup
 "autocmd VimEnter * ColorToggle
+
+" Vim-Plug
+call plug#begin('~/.local/share/nvim/site/plugged')
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+call plug#end()

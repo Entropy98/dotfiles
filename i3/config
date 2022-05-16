@@ -51,6 +51,26 @@ bindsym Mod1+Shift+f exec firefox
 # kill focused window
 bindsym Mod1+Shift+q kill
 
+#colors
+set_from_resource $fg foreground
+set_from_resource $bg background
+set_from_resource $c0 color0
+set_from_resource $c1 color1
+set_from_resource $c2 color2
+set_from_resource $c3 color3
+set_from_resource $c4 color4
+set_from_resource $c5 color5
+set_from_resource $c6 color6
+set_from_resource $c7 color7
+set_from_resource $c8 color8
+set_from_resource $c9 color9
+set_from_resource $c10 color10
+set_from_resource $c11 color11
+set_from_resource $c12 color12
+set_from_resource $c13 color13
+set_from_resource $c14 color14
+set_from_resource $c15 color15
+
 # start rofi (a program launcher)
 bindsym Mod1+d exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -153,8 +173,6 @@ bindsym Mod4+Shift+D move container to workspace number 13
 bindsym Mod4+Shift+E move container to workspace number 14
 bindsym Mod4+Shift+F move container to workspace number 15
 
-#Monitor layout
-
 # reload the configuration file
 bindsym Mod1+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -196,13 +214,13 @@ bar {
   position bottom
   font pango:BankGothic, Font Awesome 6 Brands, Font Awesome, Font Awesome Free 25
 colors{
-	background #3A523F
-	focused_workspace #83BE5D #83BE5D #5C82A9
-	statusline #D4D095
-	separator #3A523F
-	active_workspace #83BE5D #3A523F #5C82A9
-	inactive_workspace #83BE5D #3A523F #D4D095
-	urgent_workspace #83BE5D #3A523F #CA7575
+	background $bg
+	focused_workspace $bg $c6 $fg
+	statusline $fg
+	separator $fg
+	active_workspace $bg $c0 $fg
+	inactive_workspace $bg $bg $fg
+	urgent_workspace $bg $c0 $c13
 }
 }
 bar {
@@ -211,13 +229,13 @@ bar {
   position top
   font pango:BankGothic, Font Awesome 6 Brands, Font Awesome, Font Awesome Free 25
 colors{
-	background #3A523F
-	focused_workspace #83BE5D #83BE5D #5C82A9
-	statusline #D4D095
-	separator #3A523F
-	active_workspace #83BE5D #3A523F #5C82A9
-	inactive_workspace #83BE5D #3A523F #D4D095
-	urgent_workspace #83BE5D #3A523F #CA7575
+	background $bg
+	focused_workspace $bg $c6 $fg
+	statusline $fg
+	separator $fg
+	active_workspace $bg $c0 $fg
+	inactive_workspace $bg $bg $fg
+	urgent_workspace $bg $c0 $c13
 }
 }
 
@@ -251,18 +269,18 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 #class		border bg text indicator
-  client.focused #83BE5D #5C82A9 #83BE5D #83BE5D
-  client.focused_inactive #5C82A9 #83BE5D #83BE5D #83BE5D
-  client.focused_background #5C82A9 #83BE5D #5C82A9 #5C82A9
-  client.unfocused #5C82A9 #83BE5D #83BE5D #83BE5D
-  client.urgent #83BE5D #83BE5D #3A523F #83BE5D
-  client.placeholder #3A523F #3A523F #83BE5D #83BE5D
+  client.focused $bg $fg $bg $bg
+  client.focused_inactive $fg $bg $bg $bg
+  client.focused_background $fg $bg $fg $fg
+  client.unfocused $fg $bg $bg $bg
+  client.urgent $bg $bg $c0 $bg
+  client.placeholder $c0 $c0 $bg $bg
 
 #lock
-bindsym Mod4+l exec "i3lock -t -i ~/Pictures/Wallpapers/Lost.png"
+bindsym Mod4+l exec "i3lock -t -i ~/Pictures/Wallpapers/cubes.png"
 
 #background
-exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/Lost.png"
+exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/cubes.png"
 
 #transparency
 exec --no-startup-id picom -CGb
@@ -273,5 +291,3 @@ for_window [class="^.*"] border pixel 3
 
 gaps inner 10
 gaps outer 5
-
-#language

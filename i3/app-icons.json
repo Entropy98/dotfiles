@@ -9,6 +9,7 @@
     "Nautilus": "folder",
     "org.gnome.Nautilus": "folder",
     "Xviewer": "image",
+    "Eog": "image",
     "Xreader": "file-pdf",
     "Xed": "file",
     "libreoffice-calc": "file-excel",
