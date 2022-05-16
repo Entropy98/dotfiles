@@ -6,6 +6,7 @@
 * [NerdTree](https://github.com/preservim/nerdtree)
 * NeoVim
 * [coc-clang](https://github.com/clangd/coc-clangd)
+* [Pathogen](
 
 ## i3
 
@@ -16,7 +17,12 @@
 
 ## Symbolic links
 
-* ~/.config/i3/config         -> <dotfiles>/i3/config
-* ~/.config/rofi/config.rasi  -> <dotfiles>/i3/rofi/config.rasi
-* ~/.i3/app-icons.json        -> <dotfiles>/i3/app-icons.json
-* ~/.vimrc                    -> <dotfiles>/vim/.vimrc
+### i3
+* ~/.config/i3/config                         -> <dotfiles>/i3/config
+* ~/.config/rofi/config.rasi                  -> <dotfiles>/i3/rofi/config.rasi
+* ~/.i3/app-icons.json                        -> <dotfiles>/i3/app-icons.json
+
+### Vim
+* ~/.config/nvim/init.vim                     -> <dotfiles>/vim/.vimrc
+* ~/.config/nvim/plugin/cscope\_maps.vim      -> <dotfiles>/vim/.vim/plugin/cscope\_maps.vim
+* ~/.config/nvim/plugin/ColorizerPlugin.vim   -> <dotfiles>/vim/.vim/plugin/ColorizerPlugin.vim
