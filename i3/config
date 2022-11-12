@@ -266,10 +266,10 @@ bindsym XF86AudioPrev exec playerctl previous
   client.placeholder $c5 $c5 $bg $bg
 
 #lock
-bindsym Mod4+l exec "i3lock -t -i ~/Pictures/Wallpapers/outrun.png"
+bindsym Mod4+l exec "i3lock -t -i ~/Pictures/Wallpapers/zerg.png"
 
 #background
-exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/outrun.png"
+exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/zerg.png"
 
 gaps inner 10
 gaps outer 5
