@@ -119,10 +119,10 @@ fi
 LS_COLORS="di=33"
 
 # custom aliases
-alias lock='i3lock -i ~/Pictures/Wallpapers/transistor_town.png -t'
 alias minicom9600='sudo minicom -b 9600 -8 -D /dev/ttyACM0'
 alias minicom115200='sudo minicom -b 115200 -8 -D /dev/ttyACM0'
 alias 1passlogin='eval $(op signin my)'
+alias cs='cscope -R'
 
 #becker aliases
 alias conn-becker00='ssh -X entropy@192.168.0.9'
@@ -131,14 +131,17 @@ alias conn-becker02='ssh -X entropy@192.168.0.10'
 alias conn-becker03='ssh -X entropy@192.168.0.11'
 alias conn-becker04='ssh -X entropy@192.168.0.12'
 
-#AWS aliases
-alias conn-aws='ssh -i "/home/entropy/Projects/harperweiglewebsite/hweigle.pem" ubuntu@ec2-3-15-17-186.us-east-2.compute.amazonaws.com'
-
-#341 aliases
-alias conn-cmu='ssh hweigle@linux.andrew.cmu.edu -X -Y'
+# App aliases
+alias vim='nvim'
 
 PATH="$PATH:/home/entropy/Downloads/Autodesk_EAGLE_9.5.2_English_Linux_64bit/eagle-9.5.2"
 PATH="$PATH:/home/entropy/Downloads/Autodesk_EAGLE_9.5.2_English_Linux_64bit/eagle-9.5.2/bin/"
 alias 1pass='eval $(~/Downloads/op_linux_amd64_v0.9.2/op signin my)'
 
+export CSCOPE_EDITOR=nvim
+
 export QSYS_ROOTDIR="/home/entropy/intelFPGA_lite/20.1/quartus/sopc_builder/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

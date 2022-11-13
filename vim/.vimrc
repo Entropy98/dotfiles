@@ -53,7 +53,19 @@ nnoremap <C-up> <C-W><C-K>
 nnoremap <C-right> <C-W><C-L>
 nnoremap <C-left> <C-W><C-H>
 
+" Refresh CScope
+map <F5> :!cscope -Rb<CR>:cs reset<CR><CR>
+
+let NERDTreeShowHidden=1
+
 execute pathogen#infect()
 autocmd VimEnter * NERDTree | wincmd p
 "Turn on coloring on startup
 "autocmd VimEnter * ColorToggle
+
+" Vim-Plug
+call plug#begin('~/.local/share/nvim/site/plugged')
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+call plug#end()
