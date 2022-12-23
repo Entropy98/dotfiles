@@ -1,6 +1,7 @@
 {
-    "firefox": "globe",
+    "firefox": "firefox",
     "Gnome-terminal": "terminal",
+    "Xfce4-terminal": "terminal",
     "Gnome-calculator": "calculator",
     "Cinnamon-settings": "wrench",
     "Slack": "slack",
