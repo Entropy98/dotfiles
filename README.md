@@ -14,6 +14,8 @@
 
 * [i3-workspace-names-daemon](https://github.com/cboddy/i3-workspace-names-daemon)
 * [rofi](https://github.com/davatorium/rofi)
+* [i3blocks](https://github.com/vivien/i3blocks)
+* [i3lock](https://i3wm.org/i3lock/)
 
 # Usage
 
