@@ -124,13 +124,6 @@ alias minicom115200='sudo minicom -b 115200 -8 -D /dev/ttyACM0'
 alias 1passlogin='eval $(op signin my)'
 alias cs='cscope -R'
 
-#becker aliases
-alias conn-becker00='ssh -X entropy@192.168.0.9'
-alias conn-becker01='ssh -X entropy@192.168.0.4'
-alias conn-becker02='ssh -X entropy@192.168.0.10'
-alias conn-becker03='ssh -X entropy@192.168.0.11'
-alias conn-becker04='ssh -X entropy@192.168.0.12'
-
 # App aliases
 alias vim='nvim'
 
@@ -145,3 +138,6 @@ export QSYS_ROOTDIR="/home/entropy/intelFPGA_lite/20.1/quartus/sopc_builder/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# command aliases
+alias la="ls -a"
