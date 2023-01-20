@@ -45,7 +45,7 @@ floating_modifier Mod1
 bindsym PRINT exec scrot -e 'mv $f ~/Pictures/screenshots/'
 
 # start a terminal
-bindsym Mod1+Return exec i3-sensible-terminal
+bindsym Mod1+Return exec xterm
 
 #start firefox
 bindsym Mod1+Shift+f exec firefox
@@ -174,9 +174,6 @@ bindsym Mod4+Shift+D move container to workspace number 13
 bindsym Mod4+Shift+E move container to workspace number 14
 bindsym Mod4+Shift+F move container to workspace number 15
 
-#Monitor layout
-exec ~./screenlayout/home.sh
-
 # reload the configuration file
 bindsym Mod1+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -213,9 +210,10 @@ bindsym Mod1+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  workspace_buttons yes
-  position bottom
-  font pango:VT323 24
+  status_command i3blocks -c ~/Projects/dotfiles/i3/bar/i3blocks.conf
+  workspace_buttons no
+  position top
+  font pango:VT323 18
 colors{
 	background $bg
 	focused_workspace $bg $c8 $fg
@@ -228,13 +226,12 @@ colors{
 }
 
 bar {
-  status_command i3blocks -c ~/Documents/Projects/dotfiles/i3/bar/i3blocks.conf
-  workspace_buttons no
-  position top
-  font pango:VT323 24
+  workspace_buttons yes
+  position bottom
+  font pango:VT323 18
 colors{
 	background $bg
-	focused_workspace $bg $c8 $fg
+	focused_workspace $bg $c1 $fg
 	statusline $fg
 	separator $fg
 	active_workspace $bg $c8 $fg
@@ -273,23 +270,21 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 #class		border bg text indicator
-  client.focused $bg $fg $bg $bg
+  client.focused $bg $c1 $bg $bg
   client.focused_inactive $fg $bg $bg $bg
-  client.focused_background $fg $bg $fg $fg
   client.unfocused $fg $bg $bg $bg
   client.urgent $bg $bg $c5 $bg
   client.placeholder $c5 $c5 $bg $bg
 
 #lock
-bindsym Mod4+l exec "i3lock -t -i ~/Pictures/Wallpapers/miles.png"
+bindsym Mod4+l exec "i3lock -t -i ~/Pictures/Wallpapers/GG_Bridge_lock.png"
 
 #background
-exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/miles.png"
-exec --no-startup-id "compton"
-exec --no-startup-id "xfsettingsd"
+exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/GG_Bridge.png"
+exec --no-startup-id "picom --config ~/.config/i3/picom.conf &"
 
-gaps inner 10
-gaps outer 5
-for_window [class="^.*"] border pixel 4
+gaps inner 15
+gaps outer 10
+for_window [class="^.*"] border pixel 2
 
 #language

@@ -132,3 +132,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # command aliases
 alias la="ls -a"
+
+PATH=$PATH:~/.local/bin

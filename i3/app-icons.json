@@ -2,6 +2,7 @@
     "firefox": "firefox",
     "Gnome-terminal": "terminal",
     "Xfce4-terminal": "terminal",
+    "xterm": "terminal",
     "Gnome-calculator": "calculator",
     "Cinnamon-settings": "wrench",
     "Slack": "slack",
@@ -21,5 +22,6 @@
     "zoom": "video",
     "Steam": "steam",
     "Whatsapp-for-linux": "whatsapp",
+    "xfreerdp": "desktop",
     "_no_match": ""
 }
