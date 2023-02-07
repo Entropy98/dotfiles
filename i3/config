@@ -41,7 +41,7 @@ floating_modifier $mod1
 # bindsym PRINT exec scrot -e 'mv $f ~/Pictures/screenshots/'
 
 # start a terminal
-bindsym $mod1+Return exec xterm
+bindsym $mod4+Return exec xterm
 
 #start firefox
 bindsym $mod1+Shift+f exec firefox
@@ -76,22 +76,22 @@ bindsym $mod1+d exec rofi -show run
 # bindsym $mod1+d exec --no-startup-id i3-dmenu-desktop
 
 # alternatively, you can use the cursor keys:
-bindsym $mod1+Left focus left
-bindsym $mod1+Down focus down
-bindsym $mod1+Up focus up
-bindsym $mod1+Right focus right
+bindsym $mod1+h focus left
+bindsym $mod1+j focus down
+bindsym $mod1+k focus up
+bindsym $mod1+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod1+Shift+Left move left
-bindsym $mod1+Shift+Down move down
-bindsym $mod1+Shift+Up move up
-bindsym $mod1+Shift+Right move right
+bindsym $mod1+Shift+h move left
+bindsym $mod1+Shift+j move down
+bindsym $mod1+Shift+k move up
+bindsym $mod1+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod1+h split h
+bindsym $mod4+Up split h
 
 # split in vertical orientation
-bindsym $mod1+v split v
+bindsym $mod4+Down split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod1+f fullscreen toggle
@@ -173,10 +173,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
+        bindsym h        resize shrink width 10 px or 10 ppt
+        bindsym j        resize grow height 10 px or 10 ppt
+        bindsym k          resize shrink height 10 px or 10 ppt
+        bindsym l       resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -186,42 +186,43 @@ mode "resize" {
 bindsym $mod1+r mode "resize"
 
 # Pulse Audio controls
-bindsym $mod4+Up exec amixer -D pulse sset Master 5%+ #increase sound volume
-bindsym $mod4+Down exec amixer -D pulse sset Master 5%- #decrease sound volume
-bindsym $mod4+Shift+Down exec amixer -D pulse set Master 1+ toggle #toggle mute
+bindsym $mod4+k exec amixer -D pulse sset Master 5%+ #increase sound volume
+bindsym $mod4+j exec amixer -D pulse sset Master 5%- #decrease sound volume
+bindsym $mod4+Shift+j exec amixer -D pulse set Master 1+ toggle #toggle mute
 
+exec_always --no-startup-id ~/Projects/dotfiles/i3/bar/polybar/launch.sh
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-  status_command i3blocks -c ~/Projects/dotfiles/i3/bar/i3blocks.conf
-  workspace_buttons no
-  position top
-  font pango:VT323 18
-colors{
-	background $bg
-	focused_workspace $bg $c8 $fg
-	statusline $fg
-	separator $fg
-	active_workspace $bg $c8 $fg
-	inactive_workspace $bg $bg $fg
-	urgent_workspace $bg $bg $fg
-}
-}
+# bar {
+#  status_command i3blocks -c ~/Projects/dotfiles/i3/bar/i3bar/i3blocks.conf
+#  workspace_buttons no
+#  position top
+#  font pango:VT323 18
+#colors{
+#	background $bg
+#	focused_workspace $bg $c8 $fg
+#	statusline $fg
+#	separator $fg
+#	active_workspace $bg $c8 $fg
+#	inactive_workspace $bg $bg $fg
+#	urgent_workspace $bg $bg $c1
+#}
+#}
 
-bar {
-  workspace_buttons yes
-  position bottom
-  font pango:VT323 18
-colors{
-	background $bg
-	focused_workspace $bg $c1 $fg
-	statusline $fg
-	separator $fg
-	active_workspace $bg $c8 $fg
-	inactive_workspace $bg $bg $fg
-	urgent_workspace $bg $bg $fg
-}
-}
+#bar {
+#  workspace_buttons yes
+#  position bottom
+#  font pango:VT323 18
+#colors{
+#	background $bg
+#	focused_workspace $bg $c1 $fg
+#	statusline $fg
+#	separator $fg
+#	active_workspace $bg $c8 $fg
+#	inactive_workspace $bg $bg $fg
+#	urgent_workspace $bg $bg $fg
+#}
+#}
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness

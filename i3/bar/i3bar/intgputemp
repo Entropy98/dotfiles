@@ -1,0 +1,47 @@
+#!/bin/bash
+
+SENSORS=($(sensors -u))
+
+CPUDEV="k10temp-pci-00c3"
+INTGPUDEV="amdgpu-pci-1200"
+EXTGPUDEV="amdgpu-pci-0300"
+
+TEMP=""
+DEVICE=""
+
+for((i=0; i<${#SENSORS[@]}; i++));
+do
+  case ${SENSORS[i]} in
+    "${CPUDEV}")
+      DEVICE="${CPUDEV}"
+      ;;
+    "${EXTGPUDEV}")
+      DEVICE="${EXTGPUDEV}"
+      ;;
+    "${INTGPUDEV}")
+      DEVICE="${INTGPUDEV}"
+      ;;
+    "temp1_input:")
+      if [[ "${DEVICE}" == "${INTGPUDEV}" ]]; then
+        TEMP="${SENSORS[i+1]}"
+      fi
+      ;;
+    *)
+      ;;
+  esac
+done
+
+GPUCOLOR=""
+GPULOGO=""
+if [[ $((${GPU%.*})) < 65 ]]; then
+  GPUCOLOR="#0000CC"
+  GPULOGO=""
+elif [[ $((${GPU%.*})) > 85 ]]; then
+  GPUCOLOR="#CC0000"
+  GPULOGO=""
+else
+  GPULOGO=""
+fi
+
+echo "[{\"full text\":\"Int GPU ${GPULOGO} ${TEMP%.*}°C\", \"color\":\"${GPUCOLOR}\"}],"
+exit 0
