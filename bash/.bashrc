@@ -124,6 +124,9 @@ alias cs='cscope -R'
 # App aliases
 alias vim='nvim'
 
+# Development Env Vars
+export PICO_SDK_PATH='~/Sources/pico-sdk'
+
 export CSCOPE_EDITOR=nvim
 
 export NVM_DIR="$HOME/.nvm"

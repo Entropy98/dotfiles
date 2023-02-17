@@ -1,6 +1,7 @@
 #!/bin/bash
 
 SENSORS=($(sensors -u))
+CONFIG="$1"
 
 CPUDEV="k10temp-pci-00c3"
 INTGPUDEV="amdgpu-pci-1200"
@@ -43,5 +44,9 @@ else
   GPULOGO=""
 fi
 
-echo "[{\"full text\":\"Int GPU ${GPULOGO} ${TEMP%.*}°C\", \"color\":\"${GPUCOLOR}\"}],"
+if [[ ${CONFIG} == "i3bar" ]]; then
+  echo "[{\"full text\":\"Int GPU ${GPULOGO} ${TEMP%.*}°C\", \"color\":\"${GPUCOLOR}\"}],"
+else
+  echo "Int GPU ${GPULOGO} ${TEMP%.*}°C"
+fi
 exit 0

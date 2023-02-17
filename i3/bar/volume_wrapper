@@ -1,0 +1,17 @@
+#!/bin/bash
+
+VOLUME=$(~/Projects/dotfiles/i3/bar/volume "5%" pulse)
+VOLUMELOGO=""
+
+if [[ ${VOLUME} == "MUTE" ]]; then
+  echo " "
+else
+  if [[ $((${VOLUME//%})) < 33 ]]; then
+    VOLUMELOGO=" "
+  else
+    VOLUMELOGO=" "
+  fi
+  echo "${VOLUMELOGO} ${VOLUME}"
+fi
+echo ""
+exit 0

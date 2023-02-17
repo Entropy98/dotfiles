@@ -1,6 +1,7 @@
 #!/bin/bash
 
 SENSORS=($(sensors -u))
+CONFIG="$1"
 
 CPUDEV="k10temp-pci-00c3"
 INTGPUDEV="amdgpu-pci-1200"
@@ -55,5 +56,9 @@ else
   CPULOGO=""
 fi
 
-echo "[{\"full_text\":\"CPU ${CPULOGO} ${CPUDIE1%.*}°C: ${CPUDIE2%.*}°C\", \"color\":\"${CPUCOLOR}\"}],"
+if [[ ${CONFIG} == "i3bar" ]]; then
+  echo "[{\"full_text\":\"${CPULOGO} ${CPUDIE1%.*}°C: ${CPUDIE2%.*}°C\", \"color\":\"${CPUCOLOR}\"}],"
+else
+  echo "CPU ${CPULOGO} ${CPUDIE1%.*}°C: ${CPUDIE2%.*}°C"
+fi
 exit 0
