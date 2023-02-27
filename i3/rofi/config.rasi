@@ -9,11 +9,11 @@ configuration {
 
 * {
 	background-color:            #000000;
-	text-color:                  #cc0200;
-	selbg:                       #ffffff;
-	actbg:                       #cc0200;
+	text-color:                  #aaaaaa;
+	selbg:                       #aaaaaa;
+	actbg:                       #5d190d;
 	urgbg:                       #000000;
-	winbg:			                 #ffffff;
+	winbg:			                 #aaaaaa;
 
 	selected-normal-foreground:  @winbg;
 	normal-foreground:           @text-color;

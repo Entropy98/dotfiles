@@ -1,0 +1,59 @@
+#!/bin/bash
+
+SENSORS=($(sensors -u))
+
+CPUDEV="k10temp-pci-00c3"
+INTGPUDEV="amdgpu-pci-1200"
+EXTGPUDEV="amdgpu-pci-0300"
+
+CPUDIE1=""
+CPUDIE2=""
+DEVICE=""
+
+for((i=0; i<${#SENSORS[@]}; i++));
+do
+  case ${SENSORS[i]} in
+    "${CPUDEV}")
+      DEVICE="${CPUDEV}"
+      ;;
+    "${EXTGPUDEV}")
+      DEVICE="${EXTGPUDEV}"
+      ;;
+    "${INTGPUDEV}")
+      DEVICE="${INTGPUDEV}"
+      ;;
+    "temp3_input:")
+      if [[ "${DEVICE}" == "${CPUDEV}" ]]; then
+        CPUDIE1="${SENSORS[i+1]}"
+      fi
+      ;;
+    "temp4_input:")
+      if [[ "${DEVICE}" == "${CPUDEV}" ]]; then
+        CPUDIE2="${SENSORS[i+1]}"
+      fi
+      ;;
+    *)
+      ;;
+  esac
+done
+
+CPUMAX=""
+if [[ $((${CPUDIE1%.*})) > $((${CPUDIE2%.*})) ]]; then
+  CPUMAX=$CPUDIE1
+else
+  CPUMAX=$CPUDIE2
+fi
+CPUCOLOR=""
+CPULOGO=""
+if [[ $((${CPUMAX%.*})) < 40 ]]; then
+  CPUCOLOR="#0000CC"
+  CPULOGO=""
+elif [[ $((${CPUMAX%.*})) > 80 ]]; then
+  CPUCOLOR="#CC0000"
+  CPULOGO=""
+else
+  CPULOGO=""
+fi
+
+echo "[{\"full_text\":\"CPU ${CPULOGO} ${CPUDIE1%.*}°C: ${CPUDIE2%.*}°C\", \"color\":\"${CPUCOLOR}\"}],"
+exit 0

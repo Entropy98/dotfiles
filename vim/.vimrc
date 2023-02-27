@@ -69,10 +69,10 @@ function! CheckBackspace() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-inoremap <silent><expr> <Tab>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
+"inoremap <silent><expr> <Tab>
+"      \ coc#pum#visible() ? coc#pum#next(1) :
+"      \ CheckBackspace() ? "\<Tab>" :
+"      \ coc#refresh()
 
 " Vim-Plug
 call plug#begin('~/.local/share/nvim/site/plugged')
