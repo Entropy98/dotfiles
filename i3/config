@@ -45,7 +45,7 @@ floating_modifier Mod1
 bindsym PRINT exec scrot -e 'mv $f ~/Pictures/screenshots/'
 
 # start a terminal
-bindsym Mod1+Return exec i3-sensible-terminal
+bindsym Mod4+Return exec i3-sensible-terminal
 
 #start firefox
 bindsym Mod1+Shift+f exec firefox
@@ -215,7 +215,7 @@ bindsym Mod1+r mode "resize"
 bar {
   workspace_buttons yes
   position bottom
-  font pango:VT323 24
+  font pango:VT323 30
 colors{
 	background $bg
 	focused_workspace $bg $c8 $fg
@@ -231,7 +231,7 @@ bar {
   status_command i3blocks -c ~/Documents/Projects/dotfiles/i3/bar/i3blocks.conf
   workspace_buttons no
   position top
-  font pango:VT323 24
+  font pango:VT323 18
 colors{
 	background $bg
 	focused_workspace $bg $c8 $fg
