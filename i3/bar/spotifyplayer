@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CURRENT=$(~/Projects/dotfiles/i3/bar/sp current)
+CURRENT=$(sp)
 CURSECTION=""
 ALBUM=""
 ALBUMARTIST=""
