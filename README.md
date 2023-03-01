@@ -22,17 +22,25 @@
 ## Symbolic links
 
 ### i3
-* ~/.config/i3/config                         -> <dotfiles>/i3/config
-* ~/.config/rofi/config.rasi                  -> <dotfiles>/i3/rofi/config.rasi
-* ~/.i3/app-icons.json                        -> <dotfiles>/i3/app-icons.json
+* ~/.config/i3/config                         -> \<dotfiles\>/i3/config
+* ~/.config/rofi/config.rasi                  -> \<dotfiles\>/i3/rofi/config.rasi
+
+#### bar
+* ~/.local/bin/sp                             -> \<dotfiles\>/i3/bar/sp
+
+##### i3bar
+* ~/.i3/app-icons.json                        -> \<dotfiles\>/i3/app-icons.json
+
+##### Polybar
+* ~/.config/polybar/\<script-name\>           -> \<dotfiles\>/i3/bar/\<script-name\>
 
 ### Vim
-* ~/.config/nvim/autoload/Colorizer.vim       -> <dotfiles>/vim/.vim/autoload/Colorizer.vim
-* ~/.config/nvim/autoload/pathogen.vim        -> <dotfiles>/vim/.vim/autoload/pathogen.vim
-* ~/.config/nvim/autoload/plug.vim            -> <dotfiles>/vim/.vim/autoload/plug.vim
-* ~/.config/nvim/init.vim                     -> <dotfiles>/vim/.vimrc
-* ~/.config/nvim/plugin/cscope\_maps.vim      -> <dotfiles>/vim/.vim/plugin/cscope\_maps.vim
-* ~/.config/nvim/plugin/ColorizerPlugin.vim   -> <dotfiles>/vim/.vim/plugin/ColorizerPlugin.vim
+* ~/.config/nvim/autoload/Colorizer.vim       -> \<dotfiles\>/vim/.vim/autoload/Colorizer.vim
+* ~/.config/nvim/autoload/pathogen.vim        -> \<dotfiles\>/vim/.vim/autoload/pathogen.vim
+* ~/.config/nvim/autoload/plug.vim            -> \<dotfiles\>/vim/.vim/autoload/plug.vim
+* ~/.config/nvim/init.vim                     -> \<dotfiles\>/vim/.vimrc
+* ~/.config/nvim/plugin/cscope\_maps.vim      -> \<dotfiles\>/vim/.vim/plugin/cscope\_maps.vim
+* ~/.config/nvim/plugin/ColorizerPlugin.vim   -> \<dotfiles\>/vim/.vim/plugin/ColorizerPlugin.vim
 
 ### Bash
-* ~/.bashrc                                   -> <dotfiles>/bash/.bashrc
+* ~/.bashrc                                   -> \<dotfiles\>/bash/.bashrc
