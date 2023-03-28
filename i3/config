@@ -256,7 +256,7 @@ bindsym XF86AudioPrev exec playerctl previous
   client.placeholder $c5 $c5 $bg $bg
 
 #lock
-bindsym $mod4+l exec "i3lock -t -i ~/Pictures/Wallpapers/GG_Bridge_lock.png"
+bindsym $mod4+l exec "python3 ~/Projects/dotfiles/i3/lock/blurlock.py"
 
 #background
 exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/GG_Bridge.png"
