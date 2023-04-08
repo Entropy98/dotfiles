@@ -41,7 +41,7 @@ floating_modifier $mod1
 # bindsym PRINT exec scrot -e 'mv $f ~/Pictures/screenshots/'
 
 # start a terminal
-bindsym $mod4+Return exec xterm
+bindsym $mod4+Return exec kitty
 
 #start firefox
 bindsym $mod1+Shift+f exec firefox
