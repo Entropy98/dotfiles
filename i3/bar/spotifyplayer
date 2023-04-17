@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CURRENT=$(sp)
+CURRENT=$(sp current)
 CURSECTION=""
 ALBUM=""
 ALBUMARTIST=""

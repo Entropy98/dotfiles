@@ -8,7 +8,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BLOCK_PATH="${SCRIPT_DIR}/${PROG}"
 
 INTERVAL=0.25
-MAX_LENGTH=25
+MAX_LENGTH=15
 ADD_STR=" | "
 ADD_LENGTH=${#ADD_STR}
 
@@ -50,8 +50,8 @@ if [[ "${OUT_TEXT}" ]]; then
   TEXT_LINE="${OUT_TEXT}${ADD_STR}${OUT_TEXT}${ADD_STR}${OUT_TEXT}"
   TEXT_LINE=${TEXT_LINE:$SCROLL_POS:$MAX_LENGTH}
 
-  echo "<span font_family='pango:VT323'>${TEXT_LINE}</span>"
-  echo "<span font_family='pango:VT323'>${TEXT_LINE}</span>"
+  echo "${TEXT_LINE}"
+  echo "${TEXT_LINE}"
 
   SCROLL_POS=$((SCROLL_POS +1))
 

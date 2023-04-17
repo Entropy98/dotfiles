@@ -1,0 +1,11 @@
+#!/bin/bash
+
+WG_CONNECTIONS=$(nmcli c show --active | grep "wg")
+
+if [[ "$WG_CONNECTIONS" == "" ]]; then
+  OUTPUT="Down"
+else
+  OUTPUT="Up"
+fi
+
+echo $OUTPUT
