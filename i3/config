@@ -249,17 +249,17 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 #class		border bg text indicator
-  client.focused $bg $c1 $bg $bg
+  client.focused $bg $c2 $bg $bg
   client.focused_inactive $fg $bg $bg $bg
   client.unfocused $fg $bg $bg $bg
-  client.urgent $bg $bg $c5 $bg
-  client.placeholder $c5 $c5 $bg $bg
+  client.urgent $bg $bg $c1 $bg
+  client.placeholder $c1 $c1 $bg $bg
 
 #lock
 bindsym $mod4+l exec "python3 ~/Projects/dotfiles/i3/lock/blurlock.py"
 
 #background
-exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/GG_Bridge.png"
+exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/mushroom.png"
 exec --no-startup-id "picom --config ~/.config/i3/picom.conf &"
 
 gaps inner 15

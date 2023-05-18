@@ -1,8 +1,9 @@
 {
-    "battle.net.exe": "battle-net",
+    "battle.net.exe": "gamepad",
     "Cinnamon-settings": "wrench",
     "discord": "discord",
     "Eog": "image",
+    "explorer.exe": "gamepad",
     "firefox": "firefox",
     "Gnome-calculator": "calculator",
     "Gnome-terminal": "terminal",
@@ -21,6 +22,7 @@
     "Spotify": "spotify",
     "Steam": "steam",
     "Whatsapp-for-linux": "whatsapp",
+    "Wine System Tray": "gamepad",
     "Xed": "file",
     "Xfce4-terminal": "terminal",
     "xfreerdp": "desktop",
