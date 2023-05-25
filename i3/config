@@ -41,7 +41,7 @@ floating_modifier $mod1
 # bindsym PRINT exec scrot -e 'mv $f ~/Pictures/screenshots/'
 
 # start a terminal
-bindsym Mod4+Return exec i3-sensible-terminal
+bindsym Mod4+Return exec kitty
 
 #start firefox
 bindsym $mod1+Shift+f exec firefox
@@ -259,8 +259,8 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod4+l exec "python3 ~/Documents/Projects/dotfiles/i3/lock/blurlock.py"
 
 #background
-exec --no-startup-id "feh --bg-center --no-xinerama ~/Pictures/Wallpapers/miles.png"
-exec --no-startup-id "compton"
+exec --no-startup-id "feh --bg-fill --no-xinerama ~/Pictures/Wallpapers/miles.png"
+exec --no-startup-id "picom --config ~/.config/i3/picom.conf &"
 exec --no-startup-id "xfsettingsd"
 
 gaps inner 10
