@@ -23,6 +23,7 @@
 
 ### i3
 * ~/.config/i3/config                         -> \<dotfiles\>/i3/config
+* ~/.config/i3/picom.conf                     -> \<dotfiles\>/i3/picom.conf
 * ~/.config/rofi/config.rasi                  -> \<dotfiles\>/i3/rofi/config.rasi
 
 #### bar
