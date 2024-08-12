@@ -1,6 +1,10 @@
 #!/bin/bash
 
 killall -q polybar
-polybar mybar --config=$HOME/.config/polybar/config.ini 2>&1 | tee -a /tmp/polybar.log & disown
+
+# Get monitors
+for m in $(polybar --list-monitors | cut -d":" -f1); do
+    MONITOR=$m polybar --reload mybar --config=$HOME/.config/polybar/config.ini 2>&1 | tee -a /tmp/polybar.log & disown
+done
 
 echo "Polybar launched..."

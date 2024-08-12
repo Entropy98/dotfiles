@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WG_CONNECTIONS=$(nmcli c show --active | grep "wg")
+WG_CONNECTIONS=$(nmcli c show --active | grep -E "^.*(wg|vpn).*$")
 
 if [[ "$WG_CONNECTIONS" == "" ]]; then
   OUTPUT="Down"
