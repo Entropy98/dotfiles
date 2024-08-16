@@ -1,5 +1,4 @@
 {
-    "battle.net.exe": "battle-net",
     "Cinnamon-settings": "wrench",
     "discord": "discord",
     "Eog": "image",
@@ -9,7 +8,6 @@
     "Google-chrome": "chrome",
     "KiCad": "microchip",
     "kitty": "terminal",
-    "leagueclient": "l",
     "libreoffice-calc": "file-excel",
     "libreoffice-impress": "file-powerpoint",
     "libreoffice-writer": "file-word",
@@ -29,6 +27,5 @@
     "Xreader": "file-pdf",
     "xterm": "terminal",
     "Xviewer": "image",
-    "zoom": "video",
-    "_no_match": ""
+    "zoom": "video"
 }
