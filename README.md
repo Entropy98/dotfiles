@@ -18,6 +18,7 @@
 * [i3lock](https://i3wm.org/i3lock/)
 * [picom](https://github.com/yshui/picom)
 * [polybar](https://github.com/polybar/polybar)
+* [pulseaudio](https://wiki.ubuntu.com/PulseAudio)
 * [rofi](https://github.com/davatorium/rofi)
 * Xresources generated with [pic2theme](https://github.com/Entropy98/Pic-to-Theme)
 
