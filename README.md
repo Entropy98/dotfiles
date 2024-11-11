@@ -12,10 +12,17 @@
 
 ## i3
 
+* [feh](https://packages.ubuntu.com/search?keywords=feh)
 * [i3-workspace-names-daemon](https://github.com/cboddy/i3-workspace-names-daemon)
-* [rofi](https://github.com/davatorium/rofi)
 * [i3blocks](https://github.com/vivien/i3blocks)
 * [i3lock](https://i3wm.org/i3lock/)
+* [picom](https://github.com/yshui/picom)
+* [polybar](https://github.com/polybar/polybar)
+* [rofi](https://github.com/davatorium/rofi)
+* Xresources generated with [pic2theme](https://github.com/Entropy98/Pic-to-Theme)
+
+## Terminal
+* [kitty](https://sw.kovidgoyal.net/kitty/)
 
 # Usage
 
@@ -33,6 +40,9 @@
 * ~/.config/nvim/init.vim                     -> <dotfiles>/vim/.vimrc
 * ~/.config/nvim/plugin/cscope\_maps.vim      -> <dotfiles>/vim/.vim/plugin/cscope\_maps.vim
 * ~/.config/nvim/plugin/ColorizerPlugin.vim   -> <dotfiles>/vim/.vim/plugin/ColorizerPlugin.vim
+
+### Terminal
+* ~/.config/kitty/kitty.conf
 
 ### Bash
 * ~/.bashrc                                   -> <dotfiles>/bash/.bashrc
