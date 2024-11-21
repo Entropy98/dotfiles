@@ -120,7 +120,7 @@ bindsym $mod1+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod1+minus scratchpad show
 
-# exec_always --no-startup-id exec i3-workspace-names-daemon
+exec_always --no-startup-id exec i3-workspace-names-daemon
 
 # switch to workspace
 bindsym $mod1+0 workspace number 0

@@ -122,7 +122,7 @@ LS_COLORS="di=33"
 alias cs='cscope -R'
 
 # App aliases
-alias vim='nvim'
+alias vim='lvim'
 
 export CSCOPE_EDITOR=nvim
 
@@ -134,3 +134,4 @@ export NVM_DIR="$HOME/.nvm"
 alias la="ls -a"
 
 PATH=$PATH:~/.local/bin
+. "$HOME/.cargo/env"
