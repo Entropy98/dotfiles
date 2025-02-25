@@ -48,9 +48,9 @@ filetype plugin indent on
 set number
 set relativenumber
 
-nnoremap <C-down> <C-W><C-J>
-nnoremap <C-up> <C-W><C-K>
-nnoremap <C-right> <C-W><C-L>
+nnoremap <C-down> <C-W><C-N>
+nnoremap <C-up> <C-W><C-E>
+nnoremap <C-right> <C-W><C-I>
 nnoremap <C-left> <C-W><C-H>
 
 " Refresh CScope
@@ -78,5 +78,6 @@ endfunction
 call plug#begin('~/.local/share/nvim/site/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jooize/vim-colemak'
 
 call plug#end()

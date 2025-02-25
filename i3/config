@@ -77,15 +77,15 @@ bindsym $mod1+d exec rofi -show run
 
 # alternatively, you can use the cursor keys:
 bindsym $mod1+h focus left
-bindsym $mod1+j focus down
-bindsym $mod1+k focus up
-bindsym $mod1+l focus right
+bindsym $mod1+n focus down
+bindsym $mod1+e focus up
+bindsym $mod1+i focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod1+Shift+h move left
-bindsym $mod1+Shift+j move down
-bindsym $mod1+Shift+k move up
-bindsym $mod1+Shift+l move right
+bindsym $mod1+Shift+n move down
+bindsym $mod1+Shift+e move up
+bindsym $mod1+Shift+i move right
 
 # split in horizontal orientation
 bindsym $mod4+Up split h
@@ -97,9 +97,9 @@ bindsym $mod4+Down split v
 bindsym $mod1+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod1+s layout stacking
-bindsym $mod1+w layout tabbed
-bindsym $mod1+e layout toggle split
+# bindsym $mod1+s layout stacking
+# bindsym $mod1+w layout tabbed
+# bindsym $mod1+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod1+Shift+space floating toggle
@@ -133,12 +133,12 @@ bindsym $mod1+6 workspace number 6
 bindsym $mod1+7 workspace number 7
 bindsym $mod1+8 workspace number 8
 bindsym $mod1+9 workspace number 9
-bindsym $mod4+A workspace number 10
-bindsym $mod4+B workspace number 11
-bindsym $mod4+C workspace number 12
-bindsym $mod4+D workspace number 13
-bindsym $mod4+E workspace number 14
-bindsym $mod4+F workspace number 15
+# bindsym $mod4+A workspace number 10
+# bindsym $mod4+B workspace number 11
+# bindsym $mod4+C workspace number 12
+# bindsym $mod4+D workspace number 13
+# bindsym $mod4+E workspace number 14
+# bindsym $mod4+F workspace number 15
 
 # move focused container to workspace
 bindsym $mod1+Shift+0 move container to workspace number 0
@@ -151,19 +151,19 @@ bindsym $mod1+Shift+6 move container to workspace number 6
 bindsym $mod1+Shift+7 move container to workspace number 7
 bindsym $mod1+Shift+8 move container to workspace number 8
 bindsym $mod1+Shift+9 move container to workspace number 9
-bindsym $mod4+Shift+A move container to workspace number 10
-bindsym $mod4+Shift+B move container to workspace number 11
-bindsym $mod4+Shift+C move container to workspace number 12
-bindsym $mod4+Shift+D move container to workspace number 13
-bindsym $mod4+Shift+E move container to workspace number 14
-bindsym $mod4+Shift+F move container to workspace number 15
+# bindsym $mod4+Shift+A move container to workspace number 10
+# bindsym $mod4+Shift+B move container to workspace number 11
+# bindsym $mod4+Shift+C move container to workspace number 12
+# bindsym $mod4+Shift+D move container to workspace number 13
+# bindsym $mod4+Shift+E move container to workspace number 14
+# bindsym $mod4+Shift+F move container to workspace number 15
 
 # reload the configuration file
 bindsym $mod1+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod1+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod1+Shift+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -174,9 +174,9 @@ mode "resize" {
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
         bindsym h        resize shrink width 10 px or 10 ppt
-        bindsym j        resize grow height 10 px or 10 ppt
-        bindsym k          resize shrink height 10 px or 10 ppt
-        bindsym l       resize grow width 10 px or 10 ppt
+        bindsym n        resize grow height 10 px or 10 ppt
+        bindsym e          resize shrink height 10 px or 10 ppt
+        bindsym i       resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -186,9 +186,12 @@ mode "resize" {
 bindsym $mod1+r mode "resize"
 
 # Pulse Audio controls
-bindsym $mod4+k exec amixer -D pulse sset Master 5%+ #increase sound volume
-bindsym $mod4+j exec amixer -D pulse sset Master 5%- #decrease sound volume
-bindsym $mod4+Shift+j exec amixer -D pulse set Master 1+ toggle #toggle mute
+bindsym $mod4+e exec amixer -D pulse sset Master 5%+ #increase sound volume
+bindsym $mod4+n exec amixer -D pulse sset Master 5%- #decrease sound volume
+bindsym $mod4+Shift+n exec amixer -D pulse set Master 1+ toggle #toggle mute
+
+# handle screen resolution for extra wide monitor
+exec_always --no-startup-id ~/projects/dotfiles/screens/3440x1440_25Hz.sh
 
 exec_always --no-startup-id ~/projects/dotfiles/i3/bar/polybar/launch.sh
 # Start i3bar to display a workspace bar (plus the system information i3status
