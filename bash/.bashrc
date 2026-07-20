@@ -124,11 +124,13 @@ alias cs='cscope -R'
 # App aliases
 alias vim='lvim'
 
-export CSCOPE_EDITOR=nvim
+export CSCOPE_EDITOR=lvim
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export IDF_PATH="$HOME/sources/esp/esp-idf"
 
 # command aliases
 alias la="ls -a"
