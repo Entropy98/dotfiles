@@ -12,6 +12,14 @@ input {
             // You can set rules, model, layout, variant and options.
             // For more information, see xkeyboard-config(7).
 
+            // colemak's default binds Right Alt as AltGr (level-3 accent
+            // layer), so Alt+i produced í instead of a plain Alt modifier.
+            // lv3:ralt_alt makes Right Alt a normal Alt key (no accents),
+            // so Alt+key reaches terminal apps as an Alt keybinding.
+            layout "us"
+            variant "colemak"
+            options "lv3:ralt_alt"
+
             // For example:
             // layout "us,ru"
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
@@ -270,10 +278,8 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
 
-// kanshi manages output profiles (docked: GN34CW only, eDP-1 off / mobile: eDP-1 only).
-spawn-at-startup "kanshi"
-
-// Wallpaper is launched per-output-profile by kanshi (see ~/.config/kanshi/config).
+// Single monitor here, so no kanshi output profiles — set the wallpaper directly.
+spawn-at-startup "swaybg" "-i" "/usr/share/backgrounds/Little_numbat_boy_by_azskalt.png" "-m" "fill"
 
 overview {
     backdrop-color "#000000"
