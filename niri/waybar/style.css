@@ -1,0 +1,49 @@
+/* Monokai Pro ("Pro" filter) — matches nvim monokai-pro.nvim & Alacritty */
+* {
+    font-family: "CaskaydiaMono Nerd Font Propo", monospace;
+    font-weight: 300; /* SemiLight */
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(45, 42, 46, 0.92); /* #2d2a2e */
+    color: #fcfcfa;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #939293;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button.active {
+    color: #fcfcfa;
+    border-bottom: 2px solid #a9dc76; /* monokai green, matches niri focus ring */
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#window {
+    color: #78dce8;
+    margin-left: 8px;
+}
+
+#clock {
+    font-weight: bold;
+    color: #fcfcfa;
+}
+
+#pulseaudio,
+#network,
+#battery,
+#tray {
+    padding: 0 10px;
+}
+
+#battery.warning  { color: #ffd866; }
+#battery.critical { color: #ff6188; }
+#network.disconnected { color: #ff6188; }
