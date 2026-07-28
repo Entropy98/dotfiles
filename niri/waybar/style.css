@@ -37,6 +37,16 @@ window#waybar {
     color: #fcfcfa;
 }
 
+#mpris {
+    color: #ab9df2; /* monokai purple */
+    padding: 0 10px;
+    margin-right: 8px;
+}
+
+#mpris.paused {
+    color: #939293;
+}
+
 #pulseaudio,
 #network,
 #battery,

@@ -7,7 +7,7 @@
 
     "modules-left": ["niri/workspaces", "niri/window"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "battery", "tray"],
+    "modules-right": ["mpris", "pulseaudio", "network", "battery", "tray"],
 
     "niri/workspaces": {
         "format": "{index}"
@@ -17,6 +17,22 @@
         "format": "{title}",
         "max-length": 60,
         "tooltip": false
+    },
+
+    "mpris": {
+        // libplayerctl parses the reverse-DNS bus name (io.github.lullabyX.sone)
+        // and keeps only the first segment as the player name, so the mpris
+        // module matches on "io", not the full app id. See instance= in the
+        // busctl on-click commands below for the real D-Bus name.
+        "player": "io",
+        "format": "{status_icon} {artist} – {title}",
+        "format-paused": "{status_icon} {artist} – {title}",
+        "status-icons": { "playing": "", "paused": "" },
+        "max-length": 50,
+        "tooltip-format": "{album}\n{artist} – {title}",
+        "on-click": "busctl --user call org.mpris.MediaPlayer2.io.github.lullabyX.sone /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player PlayPause",
+        "on-scroll-up": "busctl --user call org.mpris.MediaPlayer2.io.github.lullabyX.sone /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player Next",
+        "on-scroll-down": "busctl --user call org.mpris.MediaPlayer2.io.github.lullabyX.sone /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player Previous"
     },
 
     "clock": {
