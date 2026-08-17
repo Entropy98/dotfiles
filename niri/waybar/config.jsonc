@@ -5,12 +5,85 @@
     "height": 30,
     "spacing": 6,
 
-    "modules-left": ["niri/workspaces", "niri/window"],
+    // niri/workspaces can't show per-window icons — window-rewrite is a
+    // hyprland-only feature — so the workspace buttons are custom modules fed by
+    // scripts/niri-ws-icons.sh, one per workspace index. Indices that don't
+    // exist print empty text and waybar hides them, so buttons appear and
+    // vanish as niri creates and reaps workspaces. Bump this list past 6 if you
+    // ever run more. custom/niri-ws-watch draws nothing: it tails niri's event
+    // stream and sends SIGRTMIN+8 to keep the buttons live.
+    "modules-left": [
+        "custom/niri-ws-watch",
+        "custom/ws1", "custom/ws2", "custom/ws3",
+        "custom/ws4", "custom/ws5", "custom/ws6",
+        "niri/window"
+    ],
     "modules-center": ["clock"],
     "modules-right": ["mpris", "pulseaudio", "network", "battery", "tray"],
 
-    "niri/workspaces": {
-        "format": "{index}"
+    "custom/niri-ws-watch": {
+        "exec": "$HOME/.config/waybar/scripts/niri-ws-watch.sh",
+        "tooltip": false
+    },
+
+    "custom/ws1": {
+        "exec": "$HOME/.config/waybar/scripts/niri-ws-icons.sh 1",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "on-click": "niri msg action focus-workspace 1",
+        "on-scroll-up": "niri msg action focus-workspace-up",
+        "on-scroll-down": "niri msg action focus-workspace-down"
+    },
+
+    "custom/ws2": {
+        "exec": "$HOME/.config/waybar/scripts/niri-ws-icons.sh 2",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "on-click": "niri msg action focus-workspace 2",
+        "on-scroll-up": "niri msg action focus-workspace-up",
+        "on-scroll-down": "niri msg action focus-workspace-down"
+    },
+
+    "custom/ws3": {
+        "exec": "$HOME/.config/waybar/scripts/niri-ws-icons.sh 3",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "on-click": "niri msg action focus-workspace 3",
+        "on-scroll-up": "niri msg action focus-workspace-up",
+        "on-scroll-down": "niri msg action focus-workspace-down"
+    },
+
+    "custom/ws4": {
+        "exec": "$HOME/.config/waybar/scripts/niri-ws-icons.sh 4",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "on-click": "niri msg action focus-workspace 4",
+        "on-scroll-up": "niri msg action focus-workspace-up",
+        "on-scroll-down": "niri msg action focus-workspace-down"
+    },
+
+    "custom/ws5": {
+        "exec": "$HOME/.config/waybar/scripts/niri-ws-icons.sh 5",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "on-click": "niri msg action focus-workspace 5",
+        "on-scroll-up": "niri msg action focus-workspace-up",
+        "on-scroll-down": "niri msg action focus-workspace-down"
+    },
+
+    "custom/ws6": {
+        "exec": "$HOME/.config/waybar/scripts/niri-ws-icons.sh 6",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "on-click": "niri msg action focus-workspace 6",
+        "on-scroll-up": "niri msg action focus-workspace-up",
+        "on-scroll-down": "niri msg action focus-workspace-down"
     },
 
     "niri/window": {

@@ -1,6 +1,11 @@
 /* Monokai Pro ("Pro" filter) — matches nvim monokai-pro.nvim & Alacritty */
 * {
-    font-family: "CaskaydiaMono Nerd Font Propo", monospace;
+    /* UbuntuMono Nerd Font sits last on purpose: pango walks this list per
+       character, so body text keeps whatever monospace resolves to while the
+       Nerd Font private-use icons resolve here instead of hitting DejaVu Sans,
+       which claims codepoints like U+F001 (music note) without drawing them.
+       Drop it once CaskaydiaMono Nerd Font is actually installed. */
+    font-family: "CaskaydiaMono Nerd Font Propo", monospace, "UbuntuMono Nerd Font Propo";
     font-weight: 300; /* SemiLight */
     font-size: 13px;
     min-height: 0;
@@ -11,19 +16,58 @@ window#waybar {
     color: #fcfcfa;
 }
 
-#workspaces button {
+/* Workspace buttons — see custom/ws* in config.jsonc. GTK CSS has no wildcard
+   selector for widget names, so each index is listed out. */
+#custom-ws1,
+#custom-ws2,
+#custom-ws3,
+#custom-ws4,
+#custom-ws5,
+#custom-ws6 {
     padding: 0 8px;
     color: #939293;
     background: transparent;
     border-bottom: 2px solid transparent;
 }
 
-#workspaces button.active {
+/* Has windows but isn't the visible one — brighter than empty, dimmer than
+   active. Must come before .active: a focused workspace carries both classes at
+   the same specificity, so whichever rule is last would win. */
+#custom-ws1.occupied,
+#custom-ws2.occupied,
+#custom-ws3.occupied,
+#custom-ws4.occupied,
+#custom-ws5.occupied,
+#custom-ws6.occupied {
+    color: #c1c0c0;
+}
+
+#custom-ws1.active,
+#custom-ws2.active,
+#custom-ws3.active,
+#custom-ws4.active,
+#custom-ws5.active,
+#custom-ws6.active {
     color: #fcfcfa;
     border-bottom: 2px solid #a9dc76; /* monokai green, matches niri focus ring */
 }
 
-#workspaces button:hover {
+#custom-ws1.urgent,
+#custom-ws2.urgent,
+#custom-ws3.urgent,
+#custom-ws4.urgent,
+#custom-ws5.urgent,
+#custom-ws6.urgent {
+    color: #ff6188; /* monokai red */
+    border-bottom: 2px solid #ff6188;
+}
+
+#custom-ws1:hover,
+#custom-ws2:hover,
+#custom-ws3:hover,
+#custom-ws4:hover,
+#custom-ws5:hover,
+#custom-ws6:hover {
     background: rgba(255, 255, 255, 0.08);
 }
 
